@@ -1,0 +1,19 @@
+name: shop
+
+type: php:7.3
+
+build:
+    flavor: none
+
+web:
+    locations:
+        "/":
+            root: ""
+            expires: 1h
+            passthru: "/index.html"
+
+disk: 512
+
+relationships:
+    elasticsearch: "elastic:elasticsearch"
+
